@@ -59,6 +59,8 @@ Link: https://chat.whatsapp.com/IKCpRmuyrNBL41wb9J2kNO?mode=ac_c`);
 > ★ AI/IA
 
 *_❌| CONTENIDO PROHIBIDO_*
+> ✦ Nudes (Packs Propios)
+> ﹂۞ Sanción: 1 Warn.
 > ✦ Earfuck (Follar/Cojer por la oreja)
 > ﹂۞ Sanción: 1 Warn.
 > ✦ Scat (Porno de Heces)
