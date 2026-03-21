@@ -173,14 +173,10 @@ command: ['angry','enojado','enojada','bleh','bored','aburrido','aburrida','clap
     const captionText = captions[currentCommand](fromName, toName, genero)
     const caption = who !== m.sender ? `\`${fromName}.\` ${captionText} \`${toName}.\` ${getRandomSymbol()}.` : `\`${fromName}\` ${captionText} ${getRandomSymbol()}.`
     try {
-    const response = await fetch(`https://tenor.googleapis.com/v2/search?q=anime+${encodeURIComponent(currentCommand)}&key=AIzaSyCY8VRFGjKZ2wpAoRTQ3faV_XcwTrYL5DA&limit=20`)
-    const json = await response.json()
-    const gifs = json.results
-    if (!gifs || gifs.length === 0) throw new Error('No se encontraron resultados en ninguna API.')
-    const media = gifs[Math.floor(Math.random() * gifs.length)].media_formats
-    const url = media.mp4?.url || media.tinymp4?.url || media.loopedmp4?.url || media.gif?.url || media.tinygif?.url
-    if (!url) throw new Error('No se encontró un formato compatible en Tenor.')  
-    await client.sendMessage(m.chat, { video: { url }, gifPlayback: true, caption, mentions: [who, m.sender] }, { quoted: m })
+      const response = await fetch(`https://api.stellarwa.xyz/sfw/interaction?inter=${currentCommand}`)
+      const json = await response.json()
+      const { result } = json
+      await client.sendMessage(m.chat, { video: { url: result }, gifPlayback: true, caption, mentions: [who, m.sender] }, { quoted: m })
     } catch (e) {
     await m.reply(`> An unexpected error occurred while executing command *${usedPrefix + command}*. Please try again or contact support if the issue persists.\n> [Error: *${e.message}*]`)
     }
